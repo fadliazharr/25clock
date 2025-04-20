@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# 25 + 5 Clock
+You can access the live demo here: https://25clock-iota.vercel.app/
+A fully functional Pomodoro-style timer app built with **React**, **TypeScript**, and **Vite**, based on the freeCodeCamp Front End Libraries certification project. This app passes all the user stories and tests provided by freeCodeCamp.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The 25 + 5 Clock is a Pomodoro-style timer that includes adjustable session and break lengths, start/stop functionality, reset, and an audio alert when sessions or breaks end. The project is built with modern tools and adheres to all 28 specified user stories.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Adjustable session and break lengths (1–60 minutes)
+- Play/pause toggle
+- Reset functionality
+- Countdown timer with mm:ss formatting
+- Automatic switch between session and break
+- Audio beep when time reaches zero
+- Clean, responsive UI
+- State management for timer logic
+- Compatible with freeCodeCamp's testing suite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React 18
+- TypeScript
+- Vite
+- Custom CSS or styling framework of choice
+- HTML5 Audio
+- FreeCodeCamp test bundle
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Requirements
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Proper labels and controls for session and break
+- Properly formatted display of time
+- Accurate behavior when starting, stopping, or resetting the timer
+- Logic for alternating between session and break modes
+- A functioning audio element with `id="beep"` that plays on every mode switch
+- Constraints to prevent setting durations below 1 or above 60
+- Resetting the timer resets all values and stops audio playback
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Setup
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/25-5-clock.git
+cd 25-5-clock
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
